@@ -1,0 +1,126 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Ordem de Serviço - TecCel</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a> &nbsp;
+            <a href="cadastroServico.html">Cadastrar ordem de serviço</a> &nbsp;
+            <a href="informacoes.html">Informações</a> &nbsp;
+            <a href="revendaCel.html">Revenda de celular usado</a> &nbsp;
+            <a href="revendaAces.html">Revenda de acessórios</a> &nbsp;
+            <a href="servicosSoftware.html">Serviços de software</a> &nbsp;
+            <a href="acompanharServ.html">Acompanhar serviço</a> &nbsp;
+        </nav>
+        <h1><img src="assets/coding.png" alt=""> TecCel - Assistência Técnica</h1>
+        <hr>
+    </header>
+
+    <main>
+        <h2>Cadastro de Ordem de Serviço</h2>
+        <form action="sucesso.html" method="post">
+            <span>*Campos obrigatórios</span>        
+            <fieldset>
+                <legend><b>DADOS PESSOAIS</b></legend>
+                <label for="name">Nome*</label>
+                <input type="text" name="name" id="" required> &nbsp;
+                <label for="cpf">CPF*</label>
+                <input type="text" name="cpf" id="" placeholder="000.000.000-00" required>
+            </fieldset>
+
+            <fieldset>
+                <legend><b>ENDEREÇO</b></legend>
+                <label for="address">Logradouro*</label>
+                <input type="text" name="address" id="" required> &nbsp;
+                <label for="cep">CEP</label>
+                <input type="number" name="cep" id="" placeholder="00000-000"> &nbsp;
+                <label for="city">Cidade*</label>
+                <input type="text" name="city" id="" required> &nbsp;
+                <label for="uf">UF*</label>
+                <select name="uf" id="" required>
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend><b>SERVIÇO</b></legend>
+                <label for="modelCell">Modelo do Celular*</label>
+                <!-- Lista de Celulares mais populares de 2022 segundo a fonte: https://today.yougov.com/ratings/technology/popularity/phone-models/all -->
+                <select name="modelCell" id="" required>
+                    <option value="" selected disabled></option>
+                    <option value="">Samsung Galaxy S21+ 5G</option>
+                    <option value="">Samsung Galaxy S10+</option>
+                    <option value="">iPhone 12 Pro</option>
+                    <option value="">Galaxy S10 Plus</option>
+                    <option value="">Samsung Galaxy S21 5G</option>
+                    <option value="">Samsung Galaxy S20 Ultra</option>
+                    <option value="">Galaxy S10</option>
+                    <option value="">iPhone 12</option>
+                    <option value="">Galaxy S8+</option>
+                    <option value="">Galaxy S7 Edge</option>
+                    <option value="">Samsung Galaxy S21 Ultra 5G</option>
+                    <option value="">Galaxy Note 8</option>
+                    <option value="">Galaxy S9</option>
+                    <option value="">Galaxy S8</option>
+                    <option value="">iPhone 12 Pro Max</option>
+                    <option value="">iPhone X</option>
+                    <option value="">iPhone 7</option>
+                    <option value="">iPhone XS</option>
+                    <option value="">iPhone 7 Plus</option>
+                    <option value="">iPhone 8 Plus</option>
+                </select>
+                <br>
+                <br>
+                <label for="fault">Relato de defeito*</label> <br>
+                <textarea name="fault" id="" cols="50" rows="15" required></textarea>
+                <br>
+                <br>
+                <label for="imageCel">Imagem do aparelho</label> <br>
+                <input type="file" name="imageCel" id="">
+            </fieldset>
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+
+    <hr>
+    <footer>
+        <p>
+            <b>Contato:</b> <br>
+            Tel: (88) 3333-3333 <br>
+            Email: teccel@gmail.com <br>
+            WhatsApp: (88) 9 9999-9999 <br>
+            <a href="https://www.instagram.com/teccel/" target="_blank"> <img src="assets/instagram.png" alt="Logo do Instagram"> Instagram</a> &nbsp;
+            <a href="https://www.twitter.com/teccel" target="_blank"><img src="assets/twitter.png" alt="Logo do Twitter"> Twitter</a> &nbsp;
+            <a href="https://www.facebook.com/teccel" target="_blank"><img src="assets/facebook.png" alt="Logo do Facebook"> Facebook</a> &nbsp;
+        </p>
+    </footer>
+</body>
+</html>
