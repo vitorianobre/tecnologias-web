@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Ysabeau&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #4d3147;
+    --txt-color: #fffbff;
+    --btn-color: #866a80;
+    --btn-hover: #c9b7c7;
+
+    --font-title: 'VT323', monospace;
+    --font-body: 'Ysabeau', sans-serif;
+}

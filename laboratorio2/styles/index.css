@@ -1,0 +1,43 @@
+body {
+    background-color: var(--bg-color);
+}
+
+header {
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1, header a {
+    color: var(--txt-color);
+}
+
+h1 {
+    font-family: var(--font-title);
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+header a {
+    font-family: var(--font-body);
+}
+
+main {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+main a img {
+    width: 200px;
+    border: 3px solid var(--btn-color);
+    border-radius: 4px;
+}
+
+main a:hover {
+    transform: scale(1.1);
+}

@@ -5,14 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demon Slayer: To the Swordsmith Village</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/filme.css">
 </head>
 <body>
     <header>
         <h1>Demon Slayer: To the Swordsmith Village</h1>
     </header>
     <main>
+        <button id="back">
+            <a href="../index.html">Voltar</a>
+        </button>
         <figure>
-            <img src="assets/filme1.jpg" alt="Poster do filme Demon Slayer: To the Swordsmith Village">
+            <img src="../assets/filme1.jpg" alt="Poster do filme Demon Slayer: To the Swordsmith Village" style="width: 250px;">
             <figcaption>Pôster do filme Demon Slayer: To the Swordsmith Village</figcaption>
         </figure>
         <ul>
@@ -27,29 +33,37 @@
             </li>
             <li><b>Duração do filme:</b> 120 min.</li>
             <li>
-                <b>Trailer:</b>
+                <p><b>Trailer:</b></p>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/YhrA6hjQbTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </li>
             <li>
-                <b>Tilha sonora:</b>
-                <audio src="assets/audio1.mp3" controls>
+                <p><b>Tilha sonora:</b></p>
+                <audio src="../assets/audio1.mp3" controls>
                     Seu navegador não suporta a tag audio
                 </audio>
             </li>
         </ul>
 
-        <label for="secao1">Seção 1</label>
-        <meter id="secao1" id="" value="36" min="0" max="50">36 de 50</meter>
-        <label for="secao2">Seção 2</label>
-        <meter id="secao2" id="" value="21" min="0" max="50">21 de 50</meter>
-        <label for="secao3">Seção 3</label>
-        <meter id="secao3" id="" value="47" min="0" max="50">47 de 50</meter>
-        <label for="secao4">Seção 4</label>
-        <meter id="secao4" id="" value="50" min="0" max="50">50 de 50</meter>
+        <div class="secoes">
+            <div class="wrapper-secao">
+                <label for="secao1">Seção 1</label>
+                <meter id="secao1" id="" value="36" min="0" max="50">36 de 50</meter>
+            </div>
+            <div class="wrapper-secao">
+                <label for="secao2">Seção 2</label>
+                <meter id="secao2" id="" value="21" min="0" max="50">21 de 50</meter>
+            </div>
+            <div class="wrapper-secao">
+                <label for="secao3">Seção 3</label>
+                <meter id="secao3" id="" value="47" min="0" max="50">47 de 50</meter>
+            </div>
+            <div class="wrapper-secao">
+                <label for="secao4">Seção 4</label>
+                <meter id="secao4" id="" value="50" min="0" max="50">50 de 50</meter>
+            </div>
+        </div>
 
-        <dialog open>
-            <p>Estreias, pré-estreias ou conteúdos alternativos podem ter preços diferenciados. Favor consultar os valores em nossos cinemas.</p>
-        </dialog>
+        <p class="aviso">Estreias, pré-estreias ou conteúdos alternativos podem ter preços diferenciados. Favor consultar os valores em nossos cinemas.</p>
     </main>
 </body>
 </html>

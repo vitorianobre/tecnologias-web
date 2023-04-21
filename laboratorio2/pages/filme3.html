@@ -5,14 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shazam! Fúria dos Deuses</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/filme.css">
 </head>
 <body>
     <header>
         <h1>Shazam! Fúria dos Deuses</h1>
     </header>
     <main>
+        <button id="back">
+            <a href="../index.html">Voltar</a>
+        </button>
         <figure>
-            <img src="assets/filme3.jpg" alt="Poster do filme Shazam! Fúria dos Deuses">
+            <img src="../assets/filme3.jpg" alt="Poster do filme Shazam! Fúria dos Deuses" style="width: 250px;">
             <figcaption>Pôster do filme Shazam! Fúria dos Deuses</figcaption>
         </figure>
         <ul>
@@ -32,24 +38,32 @@
             </li>
             <li>
                 <b>Tilha sonora:</b>
-                <audio src="assets/audio3.mp3" controls>
+                <audio src="../assets/audio3.mp3" controls>
                     Seu navegador não suporta a tag audio
                 </audio>
             </li>
         </ul>
 
-        <label for="secao1">Seção 1</label>
-        <meter id="secao1" id="" value="9" min="0" max="50">9 de 50</meter>
-        <label for="secao2">Seção 2</label>
-        <meter id="secao2" id="" value="33" min="0" max="50">33 de 50</meter>
-        <label for="secao3">Seção 3</label>
-        <meter id="secao3" id="" value="50" min="0" max="50">50 de 50</meter>
-        <label for="secao4">Seção 4</label>
-        <meter id="secao4" id="" value="21" min="0" max="50">21 de 50</meter>
+        <div class="secoes">
+            <div class="wrapper-secao">
+                <label for="secao1">Seção 1</label>
+                <meter id="secao1" id="" value="9" min="0" max="50">9 de 50</meter>
+            </div>
+            <div class="wrapper-secao">
+                <label for="secao2">Seção 2</label>
+                <meter id="secao2" id="" value="33" min="0" max="50">33 de 50</meter>
+            </div>
+            <div class="wrapper-secao">
+                <label for="secao3">Seção 3</label>
+                <meter id="secao3" id="" value="50" min="0" max="50">50 de 50</meter>
+            </div>
+            <div class="wrapper-secao">
+                <label for="secao4">Seção 4</label>
+                <meter id="secao4" id="" value="21" min="0" max="50">21 de 50</meter>
+            </div>
+        </div>
 
-        <dialog open>
-            <p>Estreias, pré-estreias ou conteúdos alternativos podem ter preços diferenciados. Favor consultar os valores em nossos cinemas.</p>
-        </dialog>
+        <p class="aviso">Estreias, pré-estreias ou conteúdos alternativos podem ter preços diferenciados. Favor consultar os valores em nossos cinemas.</p>
     </main>
 </body>
 </html>

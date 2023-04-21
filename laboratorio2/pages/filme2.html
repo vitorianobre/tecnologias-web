@@ -5,14 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Wick 4: Baba Yaga</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/filme.css">
 </head>
 <body>
     <header>
         <h1>John Wick 4: Baba Yaga</h1>
     </header>
     <main>
+        <button id="back">
+            <a href="../index.html">Voltar</a>
+        </button>
         <figure>
-            <img src="assets/filme2.jpg" alt="Poster do filme John Wick 4: Baba Yaga">
+            <img src="../assets/filme2.jpg" alt="Poster do filme John Wick 4: Baba Yaga" style="width: 250px;">
             <figcaption>Pôster do filme John Wick 4: Baba Yaga</figcaption>
         </figure>
         <ul>
@@ -32,24 +38,32 @@
             </li>
             <li>
                 <b>Tilha sonora:</b>
-                <audio src="assets/audio2.mp3" controls>
+                <audio src="../assets/audio2.mp3" controls>
                     Seu navegador não suporta a tag audio
                 </audio>
             </li>
         </ul>
 
-        <label for="secao1">Seção 1</label>
-        <meter id="secao1" id="" value="48" min="0" max="50">48 de 50</meter>
-        <label for="secao2">Seção 2</label>
-        <meter id="secao2" id="" value="13" min="0" max="50">13 de 50</meter>
-        <label for="secao3">Seção 3</label>
-        <meter id="secao3" id="" value="22" min="0" max="50">22 de 50</meter>
-        <label for="secao4">Seção 4</label>
-        <meter id="secao4" id="" value="38" min="0" max="50">38 de 50</meter>
+        <div class="secoes">
+            <div class="wrapper-secao">
+                <label for="secao1">Seção 1</label>
+                <meter id="secao1" id="" value="48" min="0" max="50">48 de 50</meter>
+            </div>
+            <div class="wrapper-secao">
+                <label for="secao2">Seção 2</label>
+                <meter id="secao2" id="" value="13" min="0" max="50">13 de 50</meter>
+            </div>
+            <div class="wrapper-secao">
+                <label for="secao3">Seção 3</label>
+                <meter id="secao3" id="" value="22" min="0" max="50">22 de 50</meter>
+            </div>
+            <div class="wrapper-secao">
+                <label for="secao4">Seção 4</label>
+                <meter id="secao4" id="" value="38" min="0" max="50">38 de 50</meter>
+            </div>
+        </div>
 
-        <dialog open>
-            <p>Estreias, pré-estreias ou conteúdos alternativos podem ter preços diferenciados. Favor consultar os valores em nossos cinemas.</p>
-        </dialog>
+        <p class="aviso">Estreias, pré-estreias ou conteúdos alternativos podem ter preços diferenciados. Favor consultar os valores em nossos cinemas.</p>
     </main>
 </body>
 </html>

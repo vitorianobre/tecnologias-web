@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <style>
+        body {
+            padding: 25px;
+            background-color: #0d0210;
+            color: var(--txt-color);
+        }
+
+        header {
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-family: var(--font-title);
+            font-weight: 400;
+            text-align: center;
+        }
+
+        main {
+            display: flex;  
+            justify-content: center;
+        }
+
+        form {
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            font-family: var(--font-body);
+        }
+
+        form label {
+            margin-bottom: 3px;
+        }
+
+        form input {
+            margin-bottom: 10px;
+            padding: 0 7px;
+            height: 35px;
+
+            border: none;
+            border-radius: 5px;
+        }
+
+        #date-birth {
+            width: 150px;
+        }
+
+        #membership-month, #dt-coupon {
+            width: 170px;
+        }
+
+        #number-movies {
+            width: 80px;
+        }
+
+        #color {
+            padding: 3px;
+        }
+
+        #gen {
+            margin-top: 10px;
+        }
+
+        ul {
+            padding-left: 50px;
+        }
+
+        ul li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        #send {
+            margin: auto;
+            width: 200px;
+            height: 40px;
+
+            background-color: var(--btn-color);
+            color: var(--txt-color);
+            border: none;
+
+            cursor: pointer;
+        }
+
+        #send:hover {
+            background-color: var(--btn-hover);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Cliente</h1>
+    </header>
+    <main>
+        <form action="" method="post">
+            <label for="date-birth">Data de nascimento: </label>
+            <input type="date" name="date-birth" id="date-birth">
+            <label for="email">E-mail: </label>
+            <input type="email" name="email" id="">
+            <label for="tel">Telefone: </label>
+            <input type="tel" name="tel" id="" placeholder="(88) 9 9999-9999">
+            <label for="membership-month">Mês de adesão:</label>
+            <input type="month" name="membership-month" id="membership-month">
+            <label for="number-movies">Número de filmes que pretende assistir semanalmente:</label>
+            <input type="number" name="number-movies" id="number-movies" min="1" max="7">
+            <label for="color">Cor de preferência:</label>
+            <input type="color" name="color" id="color">
+            <label for="url-personal">URL página pessoal: </label>
+            <input type="url" name="url-personal" id="">
+            <label for="dt-coupon">Data e hora que prefere usar o cupom de desconto da primeira compra: </label>
+            <input type="datetime-local" name="" id="dt-coupon">
+            <label for="" id="gen">Gêneros preferidos: (de 0 a 5)</label>
+            <ul>
+                <li>
+                    <label for="action">Ação</label>
+                    <input type="range" name="action" id="" min="0" max="5">
+                </li>
+                <li>
+                    <label for="drama">Drama</label>
+                    <input type="range" name="drama" id="" min="0" max="5">
+                </li>
+                <li>
+                    <label for="romance">Romance</label>
+                    <input type="range" name="romance" id="" min="0" max="5">
+                </li>
+                <li>
+                    <label for="comedy">Comédia</label>
+                    <input type="range" name="comedy" id="" min="0" max="5">
+                </li>
+                <li>
+                    <label for="thriller">Suspense</label>
+                    <input type="range" name="thriller" id="" min="0" max="5">
+                </li>
+                <li>
+                    <label for="horror">Terror</label>
+                    <input type="range" name="horror" id="" min="0" max="5">
+                </li>
+                <li>
+                    <label for="sci-fi">Ficção Científica</label>
+                    <input type="range" name="sci-fi" id="" min="0" max="5">
+                </li>
+            </ul>
+
+            <input type="submit" value="Cadastrar" id="send">
+        </form>
+    </main>
+</body>
+</html>
