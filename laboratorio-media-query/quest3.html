@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @media screen and (min-width: 1280px) {
+            div {
+                width: 100vw;
+                height: 20vh;
+            }
+
+            .green-one, .green-two {
+                background-color: rgb(113, 235, 109);
+            }
+
+            .blue-one, .blue-two {
+                background-color: rgb(24, 54, 189);
+            }
+
+            .violet {
+                background-color: plum;
+            }
+        }
+
+        @media screen and (max-width: 1279px) {
+            div {
+                width: 100vw;
+                height: 50vh;
+            }
+
+            .green-one {
+                background-color: rgb(113, 235, 109);
+            }
+
+            .blue-one {
+                background-color: rgb(24, 54, 189);
+            }
+
+            .violet, .green-two, .blue-two {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .green-one {
+                width: 100vw;
+                height: 100vh;
+                background-color: rgb(113, 235, 109);
+            }
+
+            .blue-one, .violet, .green-two, .blue-two {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="green-one"></div>
+    <div class="blue-one"></div>
+    <div class="violet"></div>
+    <div class="green-two"></div>
+    <div class="blue-two"></div>
+</body>
+</html>

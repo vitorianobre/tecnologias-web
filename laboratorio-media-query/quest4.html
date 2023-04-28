@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+    
+    <style>
+        .buttons {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: center;
+        }
+
+        button {
+            width: 200px;
+        }
+
+        .text {
+            max-width: 300px;
+            margin: auto;
+        }
+
+        .text h1 {
+            text-align: center;
+        }
+
+        .text p {
+            text-align: justify;
+        }
+
+        .bandeira {
+            display: none;
+        }
+
+        @media screen and (min-width: 768px) {
+            body {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+
+        @media screen and (min-width: 1279px) {
+            .bandeira {
+                display: block;
+            }
+
+            .bandeira img {
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button>Brasil</button>
+        <button>Alemanha</button>
+        <button>Argentina</button>
+        <button>Bélgica</button>
+        <button>Uruguai</button>
+    </div>
+    <div class="text">
+        <h1>Seleção do Brasil</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde perspiciatis dolorem temporibus fugiat! Cum asperiores, eum ipsam voluptates voluptatum vero sapiente aliquam ipsa laboriosam atque laudantium, excepturi recusandae totam sequi.</p>
+    </div>
+    <figure class="bandeira">
+        <img src="bandeira.jpg" alt="Bandeira do Brasil">
+    </figure>
+</body>
+</html>
