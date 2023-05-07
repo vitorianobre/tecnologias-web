@@ -1,0 +1,258 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(0, 119, 255);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
+#quatro, #cinco {
+    display: none;
+}
+
+.slide1 {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: end;
+}
+
+.slide2 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.slide3 {
+    display: flex;
+    gap: 20px;
+    flex-direction: row-reverse;
+    align-items: end;
+}
+
+.slide4 {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.slide5 #quatro,
+.slide5 #cinco {
+    display: flex;
+}
+
+.slide5 {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 100px;
+}
+
+.slide6 #quatro,
+.slide6 #cinco {
+    display: flex;
+}
+
+.slide6 {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 100px;
+}
+.slide6 #quatro {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.slide6 #tres {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.slide6 #dois {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.slide6 #um {
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+.slide6 #cinco {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+.slide7 {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.slide8 {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.slide9 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide10 {
+    max-width: 500px;
+    border: 1px solid black;
+    align-items: center;
+}
+
+.slide10 .container:nth-child(2) {
+    height: 60px;
+}
+
+.slide11 {
+    max-width: 500px;
+    border: 1px solid black;
+    justify-content: space-between;
+}
+
+.slide11 div {
+    height: 100%;
+}
+
+.slide12 #quatro {
+    display: flex;
+}
+
+.slide12 {
+    display: flex;
+    gap: 8px;
+}
+
+.slide12 .container:nth-child(2) {
+    background-color: red;
+}
+
+.slide13 #quatro {
+    display: flex;
+}
+
+.slide13 {
+    display: flex;
+    gap: 8px;
+}
+
+.slide13 .container:nth-child(2):hover {
+    font-size: 35px;
+    transform: translateY(-15px);
+}
+
+.slide14 #quatro {
+    display: flex;
+}
+
+.slide14 {
+    display: flex;
+    gap: 8px;
+}
+
+.slide14 .container:nth-child(2) {
+    background-color: red;
+    order: -1;
+}
+
+.slide15 #quatro {
+    display: flex;
+}
+
+.slide15 {
+    display: flex;
+    gap: 8px;
+}
+
+.slide15 .container:nth-child(2) {
+    background-color: red;
+}
+
+.slide15 .container:nth-child(3) {
+    order: -1;
+}
+
+.slide16 #quatro {
+    display: flex;
+}
+
+.slide16 {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.slide16 .container:nth-child(2) {
+    background-color: red;
+    align-self: flex-start;
+}
+
+.slide17 #quatro {
+    display: flex;
+}
+
+.slide17 {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.slide17 .container:nth-child(2) {
+    background-color: red;
+    align-self: flex-end;
+}
+
+.slide18 #quatro {
+    display: flex;
+}
+
+.slide18 {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.slide18 .container:nth-child(2) {
+    background-color: red;
+    height: 100%;
+}
+
+.slide19 {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 200px 300px 200px;
+    align-items: center;
+}
+
+.slide19 .container:nth-child(2) {
+    background-color: red;
+    width: 100%;
+}
+
+.slide20 {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+}
+
+.slide20 .container {
+    width: 100%;
+}
