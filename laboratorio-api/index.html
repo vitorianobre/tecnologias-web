@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de API</title>
+</head>
+<body>
+    <h1>Escolha uma das opções</h1>
+    <button id="search">Buscar</button>
+    <button id="register">Cadastrar</button>
+    <button id="update">Atualizar</button>
+    <button id="delete">Excluir</button>
+
+    <main>
+        
+    </main>
+
+    <script>
+        const main = document.querySelector('main');
+        const btnSearch = document.querySelector('#search');
+        const btnRegister = document.querySelector('#register');
+        const btnUpdate = document.querySelector('#update');
+        const btnDelete = document.querySelector('#delete');
+
+        btnSearch.addEventListener('click', () => {
+            main.innerHTML = `
+            <label for="id-user">Insira o ID do usuário que deseja buscar</label>
+            <input type="number" name="" id="id-user">
+            <button id="submit" onClick="getUser()">Enviar</button>
+            <div id="content"></div>`
+        })
+
+        btnRegister.addEventListener('click', () => {
+            main.innerHTML = `
+            <label for="name-user">Insira o nome do usuário</label>
+            <input type="text" name="" id="name-user">
+            <label for="email-user">Insira o e-mail do usuário</label>
+            <input type="email" name="" id="email-user">
+            <button onclick="registerUser()">Enviar</button>
+            <div id="content"></div>`
+        })
+
+        btnUpdate.addEventListener('click', () => {
+            main.innerHTML = `
+            <label for="id-user">Insira o ID do usuário que deseja atualizar</label>
+            <input type="number" name="" id="id-user">
+            <label for="name-user">Insira o novo nome do usuário</label>
+            <input type="text" name="" id="name-user">
+            <button onclick="updateUser()">Enviar</button>
+            <div id="content"></div>`
+        })
+
+        btnDelete.addEventListener('click', () => {
+            main.innerHTML = `
+            <label for="id-user">Insira o ID do usuário que deseja excluir</label>
+            <input type="number" name="" id="id-user">
+            <button onclick="deleteUser()">Enviar</button>
+            <div id="content"></div>`
+        })
+
+        function getUser() {
+            const userID = document.querySelector('#id-user').value;
+            const endpoint = `https://reqres.in/api/users/${userID}`
+            fetch(endpoint)
+                .then(response => response.json())
+                .then(data => createTable(data.data))
+        }
+
+        function registerUser() {
+            const nameUser = document.querySelector('#name-user').value;
+            const emailUser = document.querySelector('#email-user').value;
+            const dataUser = {
+                "name": nameUser,
+                "email": emailUser
+            }
+            
+            postData("https://reqres.in/api/users", dataUser).then((data) => {
+                document.querySelector('#content').innerHTML = `Usuário <strong>${data.name}</strong> com id <strong>${data.id}</strong> foi criado em ${data.createdAt}`;
+            })
+        }
+
+        function updateUser() {
+            const userID = document.querySelector('#id-user').value;
+            const nameUser = document.querySelector('#name-user').value;
+            const dataUser = {
+                "name": nameUser
+            }
+
+            putData(`https://reqres.in/api/users/${userID}`, dataUser).then((data) => {
+                document.querySelector('#content').innerHTML = `Usuário <strong>${userID}</strong> foi atualizado para <strong>${data.name}</strong> em ${data.updatedAt}`;
+            })
+        }
+
+        function deleteUser() {
+            const userID = document.querySelector('#id-user').value;
+
+            deleteData(`https://reqres.in/api/users/${userID}`).then((data) => {
+                document.querySelector('#content').innerHTML = `Usuário <strong>${userID}</strong> foi excluído`;
+            })
+        }
+
+        async function postData(url = "", data = {}) {
+            const response = await fetch(url, {
+                method: "POST",
+                mode: "cors",
+                cache: "no-cache",
+                credentials: "same-origin",
+                headers: {
+                "Content-Type": "application/json",
+                },
+                redirect: "follow",
+                referrerPolicy: "no-referrer",
+                body: JSON.stringify(data)
+            });
+            return response.json();
+        }
+
+        async function putData(url = "", data = {}) {
+            const response = await fetch(url, {
+                method: "PUT",
+                mode: "cors",
+                cache: "no-cache",
+                credentials: "same-origin",
+                headers: {
+                "Content-Type": "application/json",
+                },
+                redirect: "follow",
+                referrerPolicy: "no-referrer",
+                body: JSON.stringify(data)
+            });
+            return response.json();
+        }
+
+        async function deleteData(url = "") {
+            const response = await fetch(url, {
+                method: "DELETE",
+                mode: "cors",
+                cache: "no-cache",
+                credentials: "same-origin",
+                headers: {
+                "Content-Type": "application/json",
+                },
+                redirect: "follow",
+                referrerPolicy: "no-referrer",
+                body: JSON.stringify()
+            });
+            console.log('Status Code: ' + response.status);
+        }
+
+        function createTable(user) {
+            const tdId = document.createElement('td');
+            tdId.innerHTML = user.first_name + ' ' + user.last_name;
+            
+            const tdUser = document.createElement('td');
+            tdUser.innerHTML = user.email;
+            
+            const tr = document.createElement('tr');
+
+            tr.appendChild(tdId);
+            tr.appendChild(tdUser);
+
+            const tabela = document.createElement('table');
+            tabela.appendChild(tr);
+            document.querySelector('#content').appendChild(tabela);
+        }
+    </script>
+</body>
+</html>
